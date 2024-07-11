@@ -1,6 +1,6 @@
 FROM python:3.12.3-alpine
 
-WORKDIR /kaspy_app
+WORKDIR /app
 
 COPY requirements.lock .
 COPY requirements-dev.lock .
@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN pip install pytest
 
-COPY app/ .
+COPY kaspy/ .
 
 COPY tests/ app/tests/
 
