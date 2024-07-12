@@ -18,6 +18,9 @@ click==8.1.7
 colorama==0.4.6
     # via kaspy
 flask==3.0.3
+    # via flask-sqlalchemy
+    # via kaspy
+flask-sqlalchemy==3.1.1
     # via kaspy
 iniconfig==2.0.0
     # via pytest
@@ -37,6 +40,10 @@ pluggy==1.5.0
     # via pytest
 pytest==8.2.2
     # via kaspy
+sqlalchemy==2.0.31
+    # via flask-sqlalchemy
+typing-extensions==4.12.2
+    # via sqlalchemy
 werkzeug==3.0.3
     # via flask
     # via kaspy
