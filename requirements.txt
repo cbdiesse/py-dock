@@ -1,8 +1,38 @@
 blinker==1.8.2
+    # via flask
+    # via kaspy
 click==8.1.7
+    # via flask
+    # via kaspy
 colorama==0.4.6
-Flask==3.0.3
+    # via kaspy
+flask==3.0.3
+    # via flask-sqlalchemy
+    # via kaspy
+flask-sqlalchemy==3.1.1
+    # via kaspy
+iniconfig==2.0.0
+    # via pytest
 itsdangerous==2.2.0
-Jinja2==3.1.4
-MarkupSafe==2.1.5
-Werkzeug==3.0.3
+    # via flask
+    # via kaspy
+jinja2==3.1.4
+    # via flask
+    # via kaspy
+markupsafe==2.1.5
+    # via jinja2
+    # via kaspy
+    # via werkzeug
+packaging==24.1
+    # via pytest
+pluggy==1.5.0
+    # via pytest
+pytest==8.2.2
+    # via kaspy
+sqlalchemy==2.0.31
+    # via flask-sqlalchemy
+typing-extensions==4.12.2
+    # via sqlalchemy
+werkzeug==3.0.3
+    # via flask
+  
