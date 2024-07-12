@@ -10,8 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN pip install pytest
 
-COPY kaspy/ .
+COPY kaspy .
 
-COPY tests/ .
+COPY tests .
 
 CMD [ "python", "app.py" ]

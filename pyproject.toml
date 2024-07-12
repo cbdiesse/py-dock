@@ -34,4 +34,4 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/kaspy", "tests"]
+packages = ["src", "tests"]
