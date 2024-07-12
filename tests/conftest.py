@@ -1,5 +1,5 @@
 import pytest
-from kaspy import create_app
+from kaspy.app import create_app
 
 @pytest.fixture()
 def app():
