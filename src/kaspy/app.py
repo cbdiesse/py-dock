@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def hello_world():
     return 'Hello, everyone ! ... hello Docker!'
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
