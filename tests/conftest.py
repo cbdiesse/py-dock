@@ -1,16 +1,16 @@
 import pytest
 from kaspy.app import create_app
 
-@pytest.fixture()
-def app():
-    app = create_app()
-    app.config.update({
+@pytest.fixture(scope='session')
+def test_client():
+    test_app = create_app()
+    test_app.config.update({
         "TESTING": True,
     })
 
     # other setup can go here
 
-    yield app
+    yield test_app
 
     # clean up / reset resources here
 
