@@ -12,6 +12,6 @@ RUN pip install pytest
 
 COPY src/  /app
 
-COPY tests /app
+COPY tests/ /app/tests
 
 CMD [ "python", "app.py" ]
