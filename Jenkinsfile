@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'docker run kaspy-app python -m pytest tests/test_app'
+        sh 'docker run kaspy-app python -m pytest tests/test_app.py'
       }
     }
     stage('Deploy') {
