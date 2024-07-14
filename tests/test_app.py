@@ -1,9 +1,8 @@
-import pytest
-# from kaspy import app
+# import pytest
+from tests.conftest import client
 
 def test_index(client):
-    # client = app.create_app()
     response = client.get('/')
+    assert response.status_code == 200
     html = response.data.decode()
     assert 'Hello, everyone ! ... hello Docker!' in html
-    assert response.status_code == 200

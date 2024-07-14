@@ -2,25 +2,14 @@ import pytest
 from kaspy.app import create_app
 
 @pytest.fixture()
-def app():
-    flask_app = create_app()
-    testing_client = flask_app.test_client()
-    flask_app.config.update({
-        "TESTING": True,
-    })
+def client():
+    app = create_app({"TESTING": True })
+    with app.test_client() as client:
+        yield client
 
-    # other setup can go here
-    ctx = flask_app.app_context()
-    ctx.push()
-
-    yield testing_client
-
-    # clean up / reset resources here
-    ctx.pop()
-    
 
 @pytest.fixture()
-def client(app):
+def client2(app):
     return app.test_client()
 
 
